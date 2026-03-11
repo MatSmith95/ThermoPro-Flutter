@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
             primary: const Color(0xFFFF9F0A),
             secondary: const Color(0xFFFF9F0A),
             surface: const Color(0xFF1C1C1E),
-            background: const Color(0xFF000000),
+            // background removed — use surface instead (Flutter 3.18+)
           ),
           scaffoldBackgroundColor: const Color(0xFF000000),
           cardTheme: CardTheme(

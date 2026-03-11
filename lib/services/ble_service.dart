@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:typed_data';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'tempspike_parser.dart';
@@ -90,7 +91,7 @@ class BleService {
 
     // Parse the first manufacturer data entry
     final entry = manufacturerData.entries.first;
-    final data = TempSpikeParser.parseManufacturerData(entry.value, name);
+    final data = TempSpikeParser.parseManufacturerData(Uint8List.fromList(entry.value), name);
 
     if (data != null) {
       final deviceId = device.remoteId.toString();

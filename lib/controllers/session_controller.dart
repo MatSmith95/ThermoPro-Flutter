@@ -6,7 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import '../models/cook_session.dart';
 import '../models/temp_probe.dart';
-import '../models/temp_reading.dart';
+// import '../models/temp_reading.dart' // unused;
 
 class SessionController extends ChangeNotifier {
   late Box<CookSession> _sessionBox;
@@ -140,6 +140,7 @@ class SessionController extends ChangeNotifier {
     );
   }
 
+  @override
   void dispose() {
     _sessionBox.close();
     super.dispose();

@@ -237,7 +237,7 @@ class _ChartPanelState extends State<ChartPanel> {
             dotData: const FlDotData(show: false),
             belowBarData: BarAreaData(
               show: true,
-              color: const Color(0xFFFF9F0A).withOpacity(0.1),
+              color: const Color(0xFFFF9F0A).withValues(alpha: 0.1),
             ),
           ),
           LineChartBarData(
@@ -249,7 +249,7 @@ class _ChartPanelState extends State<ChartPanel> {
             dotData: const FlDotData(show: false),
             belowBarData: BarAreaData(
               show: true,
-              color: Colors.blue.withOpacity(0.05),
+              color: Colors.blue.withValues(alpha: 0.05),
             ),
           ),
         ],
